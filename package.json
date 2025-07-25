@@ -6,9 +6,10 @@
   "scripts": {
     "start": "npx http-server . -p 3000 -o",
     "dev": "npx live-server --port=3000 --open=/index.html",
-    "build": "npm run minify-css && npm run minify-js",
-    "minify-css": "npx csso src/css/*.css --output dist/styles.min.css",
-    "minify-js": "npx terser src/js/*.js --compress --mangle --output dist/scripts.min.js",
+    "build": "npm run create-dist && npm run minify-css && npm run minify-js",
+    "create-dist": "if not exist dist mkdir dist",
+    "minify-css": "type src\\css\\reset.css src\\css\\variables.css src\\css\\main.css src\\css\\header.css src\\css\\sidebar.css src\\css\\content.css src\\css\\responsive.css > dist\\styles.css && npx csso dist\\styles.css --output dist\\styles.min.css && del dist\\styles.css",
+    "minify-js": "npx terser src/js/utils.js src/js/data.js src/js/components.js src/js/main.js --compress --mangle --output dist/scripts.min.js",
     "lint": "npx eslint src/js/*.js",
     "format": "npx prettier --write src/**/*.{css,js}",
     "test": "npx jest",
