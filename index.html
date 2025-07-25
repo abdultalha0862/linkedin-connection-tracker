@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinkedIn - My Network</title>
-    <link rel="stylesheet" href="src/css/reset.css">
-    <link rel="stylesheet" href="src/css/variables.css">
-    <link rel="stylesheet" href="src/css/main.css">
-    <link rel="stylesheet" href="src/css/header.css">
-    <link rel="stylesheet" href="src/css/sidebar.css">
-    <link rel="stylesheet" href="src/css/content.css">
-    <link rel="stylesheet" href="src/css/responsive.css">
-    <link rel="icon" type="image/x-icon" href="src/assets/images/favicon.ico">
+    
+    <!-- LinkedIn Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://static.licdn.com/sc/h/akt4ae504epesldzj74dzred8">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://static.licdn.com/sc/h/1bt1uwq5akv756knzdj4l6cdc">
+    <link rel="apple-touch-icon" href="https://static.licdn.com/sc/h/akt4ae504epesldzj74dzred8">
+    
+    <style>
+        /* Prevent flash of unstyled content */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f3f2ef;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            visibility: hidden;
+        }
+        body.loaded {
+            visibility: visible;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -19,7 +31,9 @@
         <div class="header-container">
             <div class="logo">
                 <svg width="40" height="40" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M22.46 12h-20.92v47.26h20.92v-47.26zm-10.46 -10.46c-5.76 0 -10.46 4.7 -10.46 10.46s4.7 10.46 10.46 10.46 10.46 -4.7 10.46 -10.46 -4.7 -10.46 -10.46 -10.46zm47.26 26.38c0 -13.55 -2.92 -23.92 -18.73 -23.92 -7.61 0 -12.7 4.16 -14.81 8.12h-0.21v-6.86h-17.79v47.26h18.54v-23.4c0 -7.81 1.48 -15.37 11.17 -15.37s9.85 8.95 9.85 15.86v22.91h18.54v-24.6h0.44z" fill="#0a66c2"/>
+                    <rect width="72" height="72" rx="8" fill="#0A66C2"/>
+                    <path d="M22.46 59.26V29.46H12V59.26H22.46ZM17.23 25.24C20.37 25.24 22.88 22.73 22.88 19.59C22.88 16.45 20.37 13.94 17.23 13.94C14.09 13.94 11.58 16.45 11.58 19.59C11.58 22.73 14.09 25.24 17.23 25.24Z" fill="white"/>
+                    <path d="M29.15 59.26H39.61V43.66C39.61 39.5 40.47 35.47 45.9 35.47C51.25 35.47 51.33 40.36 51.33 43.95V59.26H61.79V42.01C61.79 33.08 59.91 26.11 49.45 26.11C44.36 26.11 41.11 28.85 39.82 31.46H39.61V29.46H29.15V59.26Z" fill="white"/>
                 </svg>
             </div>
 
@@ -122,9 +136,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="src/js/data.js"></script>
-    <script src="src/js/components.js"></script>
-    <script src="src/js/utils.js"></script>
-    <script src="src/js/main.js"></script>
+    <script type="module" src="src/js/index.js"></script>
 </body>
 </html>

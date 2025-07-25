@@ -29,6 +29,9 @@ class LinkedInNetwork {
             // Hide loading spinner
             this.showLoading(false);
             
+            // Show the page content (prevent flash of unstyled content)
+            document.body.classList.add('loaded');
+            
             this.isLoaded = true;
             utils.performance.end('appInit');
             
@@ -36,6 +39,8 @@ class LinkedInNetwork {
         } catch (error) {
             utils.handleError(error, 'App Initialization');
             this.showLoading(false);
+            // Show the page even if there's an error
+            document.body.classList.add('loaded');
         }
     }
 

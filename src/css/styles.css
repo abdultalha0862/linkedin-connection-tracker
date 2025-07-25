@@ -1,0 +1,8 @@
+/* Main CSS file for Vite bundling */
+@import './reset.css';
+@import './variables.css';
+@import './main.css';
+@import './header.css';
+@import './sidebar.css';
+@import './content.css';
+@import './responsive.css';
