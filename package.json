@@ -1,0 +1,52 @@
+{
+  "name": "linkedin-network-ui",
+  "version": "1.0.0",
+  "description": "A modern LinkedIn Network page UI built with HTML, CSS, and JavaScript",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -o",
+    "dev": "npx live-server --port=3000 --open=/index.html",
+    "build": "npm run minify-css && npm run minify-js",
+    "minify-css": "npx csso src/css/*.css --output dist/styles.min.css",
+    "minify-js": "npx terser src/js/*.js --compress --mangle --output dist/scripts.min.js",
+    "lint": "npx eslint src/js/*.js",
+    "format": "npx prettier --write src/**/*.{css,js}",
+    "test": "npx jest",
+    "validate": "npx html-validate index.html"
+  },
+  "keywords": [
+    "linkedin",
+    "ui",
+    "frontend",
+    "html",
+    "css",
+    "javascript",
+    "responsive",
+    "social-network"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "csso-cli": "^4.0.2",
+    "eslint": "^8.0.0",
+    "html-validate": "^8.0.0",
+    "http-server": "^14.0.0",
+    "jest": "^29.0.0",
+    "live-server": "^1.2.0",
+    "prettier": "^3.0.0",
+    "terser": "^5.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/linkedin-network-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/linkedin-network-ui/issues"
+  },
+  "homepage": "https://github.com/yourusername/linkedin-network-ui#readme"
+}
