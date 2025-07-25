@@ -190,3 +190,6 @@ if (typeof module !== 'undefined' && module.exports) {
 } else {
     window.sampleData = sampleData;
 }
+
+// ES Module export for Vite
+export default sampleData;

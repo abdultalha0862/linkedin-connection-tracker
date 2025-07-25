@@ -389,12 +389,6 @@ window.handleSeeAll = function(sectionId) {
     utils.showNotification(`See all ${sectionId} functionality would be implemented here`, 'info');
 };
 
-// Initialize the application when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    // Create global app instance
-    window.app = new LinkedInNetwork();
-});
-
 // Handle page visibility changes
 document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
@@ -408,3 +402,6 @@ document.addEventListener('visibilitychange', () => {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = LinkedInNetwork;
 }
+
+// ES Module export
+export default LinkedInNetwork;
