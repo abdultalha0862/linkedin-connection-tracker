@@ -366,3 +366,6 @@ if (typeof module !== 'undefined' && module.exports) {
 } else {
     window.utils = utils;
 }
+
+// ES Module export for Vite
+export default utils;

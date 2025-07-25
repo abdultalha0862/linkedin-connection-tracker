@@ -294,3 +294,6 @@ if (typeof module !== 'undefined' && module.exports) {
     window.components = components;
     window.animations = animations;
 }
+
+// ES Module export for Vite
+export default { components, animations };
